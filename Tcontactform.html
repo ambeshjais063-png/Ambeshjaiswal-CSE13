@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; }
+        form { background: white; width: 300px; padding: 20px; margin: 100px auto; }
+        input, textarea { width: 100%; margin: 10px 0; padding: 8px; }
+        button { background: green; color: white; padding: 10px; border: none; }
+    </style>
+</head>
+<body>
+
+<form onsubmit="return validate()">
+    <h2>Contact Us</h2>
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+function validate() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name === "" || email === "") {
+        alert("All fields are required");
+        return false;
+    }
+    alert("Form submitted successfully!");
+    return true;
+}
+</script>
+
+</body>
+</html>
+
